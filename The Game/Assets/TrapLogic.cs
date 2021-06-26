@@ -8,7 +8,7 @@ public class TrapLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        trap.
+      
     }
 
     // Update is called once per frame
