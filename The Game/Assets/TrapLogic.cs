@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TrapLogic : MonoBehaviour
 {
     public BoxCollider2D trap;
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
+    public UnityEvent enableTrap;
+    //Start is called before the first frame update
+    private void OnTriggerEnter2D(Collider2D collision){
 
-    // Update is called once per frame
-    void Update()
-    {
+        Debug.Log("caiu na trap");
+        
+        //Activate trap on collision
+        enableTrap.Invoke();
         
     }
 }

@@ -41,5 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log("Gay");
+        animator.SetTrigger("Died");
+        moveSpeed = 0f;
     }
 }
