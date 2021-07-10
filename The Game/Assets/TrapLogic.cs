@@ -12,17 +12,17 @@ public class TrapLogic : MonoBehaviour
 
     void Awake()
     {
-        trap = GetComponent<BoxCollider2D>();
-        sound = GetComponent<AudioSource>();
+        //trap = GetComponent<BoxCollider2D>();
+        //sound = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D collision){
 
         Debug.Log("caiu na trap");
-        sound.Play();
+        //sound.Play();
         //sound.Play();
         //Activate trap on collision
         enableTrap.Invoke();
-        Destroy(this.gameObject, 5);
+        //Destroy(this.gameObject, 5);
 
     }
 }
