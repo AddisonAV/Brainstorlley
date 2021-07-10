@@ -57,7 +57,7 @@ public class worldGenerator : MonoBehaviour
         Debug.Log(Math.Sqrt(enviromentSize));
         for (i = 0; i < enviromentSize; i++)
         {
-            toSpawn = random.Next(7);
+            toSpawn = random.Next(6);
 
             if (i % sqrtEnv == 0)
             {
