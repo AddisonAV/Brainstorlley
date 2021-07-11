@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
+    private float prevMS;
 
     public Rigidbody2D rb;
 
@@ -38,10 +39,26 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    void respawnPlayer()
+    {
+        //set the player position to 0
+        this.transform.position *= 0;
+        //set the player movement speed to its original
+        moveSpeed = prevMS;
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Gay");
+        //kill the player
         animator.SetTrigger("Died");
+
+        //save its current movement speed
+        prevMS = moveSpeed;
+        //freeze the player
         moveSpeed = 0f;
+        //call the respawn function after 1 sec delay
+        Invoke("respawnPlayer", 1);
     }
+
+
 }

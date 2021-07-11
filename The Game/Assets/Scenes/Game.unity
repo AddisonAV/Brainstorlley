@@ -290,11 +290,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c692a30a9f9ec74c942abf52eb02281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall: {fileID: 1435634705792832313, guid: 556cd8ba37b60d44491cbd536f78519e, type: 3}
   trap: {fileID: 7651012876390795295, guid: 53e7e12946be0104cb65cb29ba4339ec, type: 3}
   ground: {fileID: 6821782766500094948, guid: ec4f20f0fb6080646a678f72161023ce, type: 3}
-  bottonWall: {fileID: 6529139232506457259, guid: 9e8ae7e120c96c44188fde3d0094bbad,
-    type: 3}
+  walls:
+  - {fileID: 1134191127155087526, guid: bdafeb501de55064e8cde929bb09b482, type: 3}
+  - {fileID: 4449230612603256522, guid: 307583be84a82d04894fd06a10dcaa6e, type: 3}
+  - {fileID: 1894591354519149169, guid: 1cc538c2b357aa34788441563c18a38a, type: 3}
+  - {fileID: 2012431177534669058, guid: 5c1bad06babb43949a6c2b8ffef6ef5d, type: 3}
+  - {fileID: 4883230412670107291, guid: b1fba3a401ef53f40b6b7ca27f704589, type: 3}
+  - {fileID: 6529139232506457259, guid: 9e8ae7e120c96c44188fde3d0094bbad, type: 3}
+  - {fileID: 89405441165402592, guid: 84255d7a8048f51459784a87352b8d75, type: 3}
+  - {fileID: 4849594060109309919, guid: 9bcb488ec299d0041af59e9c634d5624, type: 3}
+  wallSorroundings:
+  - {fileID: 5909915473979557499, guid: a87d367003374114292c2e972dcee0ac, type: 3}
+  - {fileID: 3068814828143217361, guid: 009c0395c475f474a85757eef756923e, type: 3}
+  - {fileID: 4961403785284062089, guid: dd6f5431d55c0ce4ba04c4c8edcccc0e, type: 3}
+  - {fileID: 5329378682386771715, guid: 3edaeef7f817c304e8e7d215597b96d3, type: 3}
+  - {fileID: 2370974096631146141, guid: f41e0fbafd76cf24b8c0310a5b9ee71d, type: 3}
+  - {fileID: 1412589965193755556, guid: c708302dbe013e64f82756eb87672882, type: 3}
+  - {fileID: 8807650536954162783, guid: df658e4cec0196c4185207d0c8f956cd, type: 3}
+  - {fileID: 7761101344772852423, guid: 67c50a38f066dde4cbe928abd6a0a34d, type: 3}
+  - {fileID: 3035668488971145445, guid: 9f5eca5e88f81814fbb0c3e494b50287, type: 3}
+  - {fileID: 2786258274566631361, guid: ade911a68735c114788d768a23938a07, type: 3}
+  - {fileID: 929115891398169436, guid: e5e0de739ef5e3b4caafbf6bffb283f2, type: 3}
   enviroment:
   - {fileID: 4380689852112026632, guid: a60f54c7cd2a6264696139182aac053b, type: 3}
   - {fileID: 184705262159506257, guid: 2c387e30969f69645ada8f30791a1b8d, type: 3}
@@ -302,6 +320,7 @@ MonoBehaviour:
   - {fileID: 8108049566597362799, guid: 3b8e13c89d7d7d74ca496274789a1ab4, type: 3}
   - {fileID: 6901078135930874591, guid: 09fbf0534517e874f8276ae19f191b8a, type: 3}
   - {fileID: 3682641268994255481, guid: 77c5f0acf7c9caf44bd22cde6c0fa294, type: 3}
+  difficulty: 1
 --- !u!4 &675073725
 Transform:
   m_ObjectHideFlags: 0
@@ -416,7 +435,7 @@ PrefabInstance:
     - target: {fileID: 4522520935596556309, guid: 635ca75a4f2f3314db2337ecc8d7dc32,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4522520935596556309, guid: 635ca75a4f2f3314db2337ecc8d7dc32,
         type: 3}
