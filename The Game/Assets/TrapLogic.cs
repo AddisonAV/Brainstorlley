@@ -18,7 +18,7 @@ public class TrapLogic : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D player) { 
         if (player.tag == "Player")
         {
-            Debug.Log("caiu na trap");
+            //Debug.Log("caiu na trap");
             //sound.Play();
             //sound.Play();
             //Activate trap on collision
@@ -27,4 +27,5 @@ public class TrapLogic : MonoBehaviour
         }
 
     }
+
 }

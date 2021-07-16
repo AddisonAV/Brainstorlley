@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4522520935596556306}
   - component: {fileID: 4522520935596556309}
   - component: {fileID: 4522520935596556308}
-  - component: {fileID: 4522520935596556307}
   - component: {fileID: 4522520935596556310}
+  - component: {fileID: 4522520935596556307}
+  - component: {fileID: 5439202733707365414}
   m_Layer: 0
   m_Name: Saray
   m_TagString: Player
@@ -107,21 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4522520935596556307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4522520935596556305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4877776f8f43da47841f4cdaf27bee8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 4522520935596556308}
-  animator: {fileID: 4522520935596556310}
 --- !u!95 &4522520935596556310
 Animator:
   serializedVersion: 3
@@ -141,3 +127,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4522520935596556307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4522520935596556305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4877776f8f43da47841f4cdaf27bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 4522520935596556308}
+  animator: {fileID: 4522520935596556310}
+--- !u!114 &5439202733707365414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4522520935596556305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a67a34fa82aac4791718dc6f657f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
