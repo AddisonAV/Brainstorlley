@@ -7,13 +7,14 @@ public class worldGenerator : MonoBehaviour
 {
     public GameObject trap;
     public GameObject ground;
+    public GameObject winGround;
     public GameObject[] walls = new GameObject[8];
     public GameObject[] wallSorroundings = new GameObject[12];
     public GameObject[] enviroment = new GameObject[6];
 
     private int fieldWidth = 10;
     private int fieldHeight = 5;
-    public int difficulty = 2;
+    public int difficulty = 1;
 
     Vector3 offset;
     // Start is called before the first frame update
@@ -56,6 +57,12 @@ public class worldGenerator : MonoBehaviour
         {
             for (i = 0; i < fieldWidth; i++)
             {
+                if( (i  == fieldWidth -1) && (k == fieldHeight -1) )
+                {
+                    Instantiate(winGround, offset, ground.transform.rotation);
+                    continue;
+                }
+                
    
                 toSpawn = random.Next(difficulty + diffConstant);
 
@@ -71,6 +78,7 @@ public class worldGenerator : MonoBehaviour
                     Instantiate(ground, offset, ground.transform.rotation);
                     Instantiate(trap, offset, trap.transform.rotation);
                     offset[0] += 1.5f;
+                    
                 }
 
             }
@@ -169,12 +177,12 @@ public class worldGenerator : MonoBehaviour
         //spawn the enviroment
 
         //offset to fill the visible area below the initial position
-        offset[0] = -12;
-        offset[1] = -9;
+        offset[0] = -24;
+        offset[1] = -18;
 
-        for(k = 0; k < fieldHeight + 15; k++) { 
+        for(k = 0; k < fieldHeight*4; k++) { 
      
-            for (i = 0; i < fieldWidth+15; i++)
+            for (i = 0; i < fieldWidth*4; i++)
             {
                 //spawn a random enviroment prefab 
                 toSpawn = random.Next(enviroment.Length);
@@ -182,15 +190,21 @@ public class worldGenerator : MonoBehaviour
                 offset[0] += 1.5f;
 
             }
-            offset[0] = -12;
+            offset[0] = -24;
             offset[1] += 1.5f;
         }
         // ----------------------- END DO NOT CHANGE -------------------------------------
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetLevel()
     {
-        
+        var Wally = GameObject.FindGameObjectsWithTag("Trap");
+
+        foreach (GameObject item in Wally) //the line the error is pointing to
+        {
+            //enemies[i].active = true;
+            item.SendMessage("ReActivate");
+        }
+        Debug.Log("FOI CORNO FICA CALMO.");
     }
 }
