@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6872159613351282700}
-  - component: {fileID: -683202379923603724}
+  - component: {fileID: 2472375985233513976}
+  - component: {fileID: 142601683197064341}
   m_Layer: 0
   m_Name: WinGround
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-683202379923603724
+--- !u!114 &2472375985233513976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +42,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 6872159613351282701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d055c91528fece74489dee5c2e06e040, type: 3}
+  m_Script: {fileID: 11500000, guid: 93047f4a084071a41bd16c1546921cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &142601683197064341
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872159613351282701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12, y: -0.59}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3}
+  m_EdgeRadius: 0
 --- !u!1 &6872159613992445715
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,8 +82,6 @@ GameObject:
   - component: {fileID: 6872159613992445713}
   - component: {fileID: 6872159613992445714}
   - component: {fileID: 6872159613992445743}
-  - component: {fileID: 6872159613992445712}
-  - component: {fileID: 6872159613992445742}
   m_Layer: 9
   m_Name: Trap
   m_TagString: Untagged
@@ -167,46 +192,3 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &6872159613992445712
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6872159613992445715}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &6872159613992445742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6872159613992445715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f14dcafad25a0645b344a5f481c899a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trap: {fileID: 6872159613992445712}
-  sound: {fileID: 0}
-  enableTrap:
-    m_PersistentCalls:
-      m_Calls: []
