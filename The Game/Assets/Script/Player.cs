@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         {
             CurrentHealth = 0;
             playerMovement.animator.SetTrigger("Died");
-            playerMovement.moveSpeed = 0f;
+            playerMovement.changeMoveSpeed(0);
 
             Invoke("respawnPlayer", 1);
         }
@@ -32,11 +32,11 @@ public class Player : MonoBehaviour
 
     }
 
-    private void respawnPlayer()
+    public void respawnPlayer()
     {
         //playerMovement.respawnPlayer();
         this.transform.position *= 0;
-        playerMovement.moveSpeed = 4f;
+        playerMovement.resetMoveSpeed();
 
         CurrentHealth = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
@@ -45,8 +45,22 @@ public class Player : MonoBehaviour
         world.GetComponent<worldGenerator>().ResetLevel();
     }
 
+    public void respawnPlayer(bool nextLevel)
+    {
+        this.transform.position *= 0;
+        playerMovement.resetMoveSpeed();
+        MaxHealth += 10;
+        CurrentHealth = MaxHealth;
+        healthBar.SetMaxHealth(MaxHealth);
+    }
+
+    public void UnablePlayer()
+    {
+        this.playerMovement.changeMoveSpeed(0);
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        TakeDamage(10);
+        if(collider.tag == "realTrap") TakeDamage(10);
     }
 }

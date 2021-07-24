@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class testtt : MonoBehaviour
+public class ControlTrap : MonoBehaviour
 {
     public UnityEvent resetTrap;
 
