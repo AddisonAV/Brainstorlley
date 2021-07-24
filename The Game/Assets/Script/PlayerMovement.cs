@@ -13,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
     private int LastDir;
+    private float curMoveSpeed;
+
+    private void Start()
+    {
+        curMoveSpeed = moveSpeed;
+    }
 
     // Update is called once per frame
     void Update()
@@ -35,7 +41,17 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * curMoveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void changeMoveSpeed(float newMoveSpeed)
+    {
+        this.curMoveSpeed = newMoveSpeed;
+    }
+
+    public void resetMoveSpeed()
+    {
+        this.curMoveSpeed = moveSpeed;
     }
 
     /*/
