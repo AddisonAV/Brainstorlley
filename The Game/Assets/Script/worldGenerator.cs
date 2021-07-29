@@ -8,10 +8,11 @@ public class worldGenerator : MonoBehaviour
     public GameObject trap;
     public GameObject ground;
     public GameObject winGround;
+    public AudioSource[] Songs = new AudioSource[6];
     public GameObject[] walls = new GameObject[8];
     public GameObject[] wallSorroundings = new GameObject[12];
     public GameObject[] enviroment = new GameObject[6];
-
+    private AudioSource music;
     public int difficulty = 1;
     private int fieldWidth = 10;
     private int fieldHeight = 5;
@@ -21,8 +22,11 @@ public class worldGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        System.Random random = new System.Random();
         LevelTime = Time.realtimeSinceStartup;
-
+        music = Songs[random.Next(6)].GetComponent<AudioSource>();
+        //music.volume = 0.1f;
+        music.Play();
         buildWorld();
     }
 
@@ -215,7 +219,10 @@ public class worldGenerator : MonoBehaviour
         {
             Destroy(item);
         }
-
+        System.Random random = new System.Random();
+        music.Stop();
+        music = Songs[random.Next(6)].GetComponent<AudioSource>();
+        music.Play();
         buildWorld();
         var player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<Player>().respawnPlayer(true);

@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     public int CurrentHealth;
     public int MaxHealth;
     public PlayerMovement playerMovement;
-
+    public AudioSource dorzinha;
+    public AudioSource death;
     public HealthBar healthBar;
     void Start()
     {
@@ -18,14 +19,21 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (CurrentHealth > 0)
+        {
+            dorzinha.Play();
+        }
+
         CurrentHealth -= damage;
+
         if (CurrentHealth <= 0)
         {
             CurrentHealth = 0;
             playerMovement.animator.SetTrigger("Died");
             playerMovement.changeMoveSpeed(0);
-
-            Invoke("respawnPlayer", 1);
+            death.Play();
+            
+            Invoke("respawnPlayer", 2.1f);
         }
 
         healthBar.SetHealth(CurrentHealth);
