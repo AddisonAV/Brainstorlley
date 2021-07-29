@@ -7,10 +7,13 @@ public class WinScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        var canvas = GameObject.FindGameObjectWithTag("Canvas");
-        var player = GameObject.FindGameObjectWithTag("Player");
+        if (collider.tag == "Player")
+        {
+            var canvas = GameObject.FindGameObjectWithTag("Canvas");
+            var player = GameObject.FindGameObjectWithTag("Player");
 
-        canvas.SendMessage("setNextLevelCanvas", true);
-        player.SendMessage("UnablePlayer");
+            canvas.SendMessage("setNextLevelCanvas", true);
+            player.SendMessage("UnablePlayer");
+        }
     }
 }

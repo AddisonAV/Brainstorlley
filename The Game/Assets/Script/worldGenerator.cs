@@ -47,13 +47,11 @@ public class worldGenerator : MonoBehaviour
         {
             for (i = 0; i < fieldWidth; i++)
             {
-                if ((i == fieldWidth - 1) && (k == fieldHeight - 1))
+                /*if ((i == fieldWidth - 1) && (k == fieldHeight - 1))
                 {
                     Instantiate(winGround, offset, ground.transform.rotation);
                     continue;
-                }
-
-
+                }*/
 
                 toSpawn = random.Next(100);
 
@@ -123,7 +121,12 @@ public class worldGenerator : MonoBehaviour
         for (i = 0; i < fieldHeight; i++)
         {
             offset[1] -= 1.5f;
-            Instantiate(walls[1], offset, trap.transform.rotation);
+            if (i == 0)
+            {
+                Instantiate(winGround, offset, ground.transform.rotation);
+                continue;
+            }
+            else Instantiate(walls[1], offset, trap.transform.rotation);
             offset[0] += 1.5f;
             if (i % 2 == 0) Instantiate(wallSorroundings[6], offset, trap.transform.rotation);
             else Instantiate(wallSorroundings[7], offset, trap.transform.rotation);
