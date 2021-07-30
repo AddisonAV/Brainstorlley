@@ -59,3 +59,136 @@ sysinfo.txt
 crashlytics-build.properties
 
 The Game/.vsconfig
+The Game/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll
+The Game/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll
+The Game/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser
+The Game/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+The Game/MonoBleedingEdge/etc/mono/2.0/machine.config
+The Game/MonoBleedingEdge/etc/mono/2.0/settings.map
+The Game/MonoBleedingEdge/etc/mono/2.0/web.config
+The Game/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser
+The Game/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx
+The Game/MonoBleedingEdge/etc/mono/4.0/machine.config
+The Game/MonoBleedingEdge/etc/mono/4.0/settings.map
+The Game/MonoBleedingEdge/etc/mono/4.0/web.config
+The Game/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser
+The Game/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx
+The Game/MonoBleedingEdge/etc/mono/4.5/machine.config
+The Game/MonoBleedingEdge/etc/mono/4.5/settings.map
+The Game/MonoBleedingEdge/etc/mono/4.5/web.config
+The Game/MonoBleedingEdge/etc/mono/browscap.ini
+The Game/MonoBleedingEdge/etc/mono/config
+The Game/MonoBleedingEdge/etc/mono/mconfig/config.xml
+The Game/The Game.exe
+The Game/The Game_Data/app.info
+The Game/The Game_Data/boot.config
+The Game/The Game_Data/globalgamemanagers
+The Game/The Game_Data/globalgamemanagers.assets
+The Game/The Game_Data/level0
+The Game/The Game_Data/level1
+The Game/The Game_Data/Managed/Assembly-CSharp.dll
+The Game/The Game_Data/Managed/Mono.Security.dll
+The Game/The Game_Data/Managed/mscorlib.dll
+The Game/The Game_Data/Managed/netstandard.dll
+The Game/UnityPlayer.dll
+The Game/UnityCrashHandler64.exe
+The Game/The Game_Data/sharedassets1.resource
+The Game/The Game_Data/sharedassets1.assets.resS
+The Game/The Game_Data/sharedassets1.assets
+The Game/The Game_Data/sharedassets0.assets.resS
+The Game/The Game_Data/sharedassets0.assets
+The Game/The Game_Data/ScriptingAssemblies.json
+The Game/The Game_Data/RuntimeInitializeOnLoads.json
+The Game/The Game_Data/Resources/unity_builtin_extra
+The Game/The Game_Data/Resources/unity default resources
+The Game/The Game_Data/resources.assets.resS
+The Game/The Game_Data/resources.assets
+The Game/The Game_Data/Managed/UnityEngine.XRModule.dll
+The Game/The Game_Data/Managed/UnityEngine.WindModule.dll
+The Game/The Game_Data/Managed/UnityEngine.VRModule.dll
+The Game/The Game_Data/Managed/UnityEngine.VirtualTexturingModule.dll
+The Game/The Game_Data/Managed/UnityEngine.VideoModule.dll
+The Game/The Game_Data/Managed/UnityEngine.VFXModule.dll
+The Game/The Game_Data/Managed/UnityEngine.VehiclesModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityWebRequestModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityTestProtocolModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityCurlModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityConnectModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UnityAnalyticsModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UNETModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UmbraModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UIModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UIElementsNativeModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UIElementsModule.dll
+The Game/The Game_Data/Managed/UnityEngine.UI.dll
+The Game/The Game_Data/Managed/UnityEngine.TLSModule.dll
+The Game/The Game_Data/Managed/UnityEngine.TilemapModule.dll
+The Game/The Game_Data/Managed/UnityEngine.TextRenderingModule.dll
+The Game/The Game_Data/Managed/UnityEngine.TextCoreModule.dll
+The Game/The Game_Data/Managed/UnityEngine.TerrainPhysicsModule.dll
+The Game/The Game_Data/Managed/UnityEngine.TerrainModule.dll
+The Game/The Game_Data/Managed/UnityEngine.SubsystemsModule.dll
+The Game/The Game_Data/Managed/UnityEngine.SubstanceModule.dll
+The Game/The Game_Data/Managed/UnityEngine.StreamingModule.dll
+The Game/The Game_Data/Managed/UnityEngine.SpriteShapeModule.dll
+The Game/The Game_Data/Managed/UnityEngine.SpriteMaskModule.dll
+The Game/The Game_Data/Managed/UnityEngine.SharedInternalsModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ScreenCaptureModule.dll
+The Game/The Game_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ProfilerModule.dll
+The Game/The Game_Data/Managed/UnityEngine.PhysicsModule.dll
+The Game/The Game_Data/Managed/UnityEngine.Physics2DModule.dll
+The Game/The Game_Data/Managed/UnityEngine.PerformanceReportingModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ParticleSystemModule.dll
+The Game/The Game_Data/Managed/UnityEngine.LocalizationModule.dll
+The Game/The Game_Data/Managed/UnityEngine.JSONSerializeModule.dll
+The Game/The Game_Data/Managed/UnityEngine.InputModule.dll
+The Game/The Game_Data/Managed/UnityEngine.InputLegacyModule.dll
+The Game/The Game_Data/Managed/UnityEngine.IMGUIModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ImageConversionModule.dll
+The Game/The Game_Data/Managed/UnityEngine.HotReloadModule.dll
+The Game/The Game_Data/Managed/UnityEngine.GridModule.dll
+The Game/The Game_Data/Managed/UnityEngine.GIModule.dll
+The Game/The Game_Data/Managed/UnityEngine.GameCenterModule.dll
+The Game/The Game_Data/Managed/UnityEngine.DSPGraphModule.dll
+The Game/The Game_Data/Managed/UnityEngine.dll
+The Game/The Game_Data/Managed/UnityEngine.DirectorModule.dll
+The Game/The Game_Data/Managed/UnityEngine.CrashReportingModule.dll
+The Game/The Game_Data/Managed/UnityEngine.CoreModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ClusterRendererModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ClusterInputModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ClothModule.dll
+The Game/The Game_Data/Managed/UnityEngine.AudioModule.dll
+The Game/The Game_Data/Managed/UnityEngine.AssetBundleModule.dll
+The Game/The Game_Data/Managed/UnityEngine.ARModule.dll
+The Game/The Game_Data/Managed/UnityEngine.AnimationModule.dll
+The Game/The Game_Data/Managed/UnityEngine.AndroidJNIModule.dll
+The Game/The Game_Data/Managed/UnityEngine.AIModule.dll
+The Game/The Game_Data/Managed/UnityEngine.AccessibilityModule.dll
+The Game/The Game_Data/Managed/Unity.Timeline.dll
+The Game/The Game_Data/Managed/Unity.TextMeshPro.dll
+The Game/The Game_Data/Managed/System.Xml.XPath.XDocument.dll
+The Game/The Game_Data/Managed/System.Xml.Linq.dll
+The Game/The Game_Data/Managed/System.Xml.dll
+The Game/The Game_Data/Managed/System.Transactions.dll
+The Game/The Game_Data/Managed/System.ServiceModel.Internals.dll
+The Game/The Game_Data/Managed/System.Runtime.Serialization.Xml.dll
+The Game/The Game_Data/Managed/System.Runtime.Serialization.dll
+The Game/The Game_Data/Managed/System.Numerics.dll
+The Game/The Game_Data/Managed/System.Net.Http.dll
+The Game/The Game_Data/Managed/System.IO.Compression.FileSystem.dll
+The Game/The Game_Data/Managed/System.IO.Compression.dll
+The Game/The Game_Data/Managed/System.Globalization.Extensions.dll
+The Game/The Game_Data/Managed/System.EnterpriseServices.dll
+The Game/The Game_Data/Managed/System.Drawing.dll
+The Game/The Game_Data/Managed/System.dll
+The Game/The Game_Data/Managed/System.Diagnostics.StackTrace.dll
+The Game/The Game_Data/Managed/System.Data.dll
+The Game/The Game_Data/Managed/System.Core.dll
+The Game/The Game_Data/Managed/System.Configuration.dll
+The Game/The Game_Data/Managed/System.ComponentModel.Composition.dll
+The Game/The Game_Data/Managed/Newtonsoft.Json.dll
