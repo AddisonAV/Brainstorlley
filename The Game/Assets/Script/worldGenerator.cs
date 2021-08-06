@@ -14,8 +14,8 @@ public class worldGenerator : MonoBehaviour
     public GameObject[] enviroment = new GameObject[6];
     private AudioSource music;
     public int difficulty = 1;
-    private int fieldWidth = 10;
-    private int fieldHeight = 5;
+    private int fieldWidth = 3;
+    private int fieldHeight = 3;
     private double LevelTime;
 
     Vector3 offset;
@@ -29,9 +29,16 @@ public class worldGenerator : MonoBehaviour
         music.Play();
         buildWorld();
     }
+   
+    bool isCantinhoAndMeinho(int k, int i)
+    {
+        if (i == 0 || k == fieldHeight-1 || k == 0 || i == fieldWidth-1 || i == k) return true;
+        return false;
+    }
 
     void buildWorld()
     {
+        
         int toSpawn;
         int i, k;
         System.Random random = new System.Random();
@@ -39,9 +46,12 @@ public class worldGenerator : MonoBehaviour
 
         //setting fiedsize based on the difficulty
 
-        fieldWidth = (int)(5 + difficulty*(difficulty+1));
-        fieldHeight = (int)(2.5 + (difficulty*difficulty));
+        //fieldWidth = (int)(5 + difficulty*(difficulty+1));
+        //fieldHeight = (int)(2.5 + (difficulty*difficulty));
+        fieldWidth = difficulty <= 3 ? fieldWidth + 2 : fieldWidth+1;
+        fieldHeight = difficulty <= 3 ? fieldHeight + 2 : fieldHeight + 1;
 
+        Debug.Log(fieldHeight + "     ---    " + fieldWidth);
         //spawn the bomb field
         offset = ground.transform.position;
         offset[0] = 0;
@@ -61,7 +71,7 @@ public class worldGenerator : MonoBehaviour
 
                 //difficulty equals 1 or 3-> 50% chance of spawning a trap
                 //difficulty equals 2 -> 66% chance of spawning a trap
-                if (toSpawn <= 35 && (i != 0 && k != 0))
+                if ((i != 0 || k != 0) && (toSpawn <= 35 || (isCantinhoAndMeinho(k, i) && toSpawn <= 70)))
                 {
                     Instantiate(ground, offset, ground.transform.rotation);
                     Instantiate(trap, offset, trap.transform.rotation);
@@ -232,5 +242,10 @@ public class worldGenerator : MonoBehaviour
     public double GetTimeFromLevelStart()
     {
         return this.LevelTime;
+    }
+
+    public int getCurrentLevel()
+    {
+        return this.difficulty;
     }
 }
