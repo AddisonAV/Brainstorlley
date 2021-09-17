@@ -1,42 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
-    public int CurrentHealth;
-    public int MaxHealth;
+    [FormerlySerializedAs("CurrentHealth")] public int currentHealth;
+    [FormerlySerializedAs("MaxHealth")] public int maxHealth;
     public PlayerMovement playerMovement;
     public AudioSource dorzinha;
     public AudioSource death;
     public HealthBar healthBar;
     void Start()
     {
-        CurrentHealth = MaxHealth;
-        healthBar.SetMaxHealth(MaxHealth);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         playerMovement = this.gameObject.GetComponent<PlayerMovement>();
     }
 
     public void TakeDamage(int damage)
     {
-        if (CurrentHealth > 0)
+        if (currentHealth > 0)
         {
-            dorzinha.Play();
+            SoundManager.PlaySound(SoundManager.Sound.PlayerHurt,0.8f);
         }
 
-        CurrentHealth -= damage;
+        currentHealth -= damage;
 
-        if (CurrentHealth <= 0)
+        if (currentHealth <= 0)
         {
-            CurrentHealth = 0;
+            currentHealth = 0;
             playerMovement.animator.SetTrigger("Died");
             playerMovement.changeMoveSpeed(0);
-            death.Play();
+            SoundManager.PlaySound(SoundManager.Sound.PlayerDie,1f);
             
             Invoke("respawnPlayer", 2.1f);
         }
 
-        healthBar.SetHealth(CurrentHealth);
+        healthBar.SetHealth(currentHealth);
 
     }
 
@@ -46,8 +47,8 @@ public class Player : MonoBehaviour
         this.transform.position *= 0;
         playerMovement.resetMoveSpeed();
 
-        CurrentHealth = MaxHealth;
-        healthBar.SetMaxHealth(MaxHealth);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
 
         GameObject world = GameObject.Find("WorldGen");
         world.GetComponent<worldGenerator>().ResetLevel();
@@ -57,9 +58,9 @@ public class Player : MonoBehaviour
     {
         this.transform.position *= 0;
         playerMovement.resetMoveSpeed();
-        MaxHealth += 10;
-        CurrentHealth = MaxHealth;
-        healthBar.SetMaxHealth(MaxHealth);
+        maxHealth += 10;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void UnablePlayer()
